@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotobox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFE5B4 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 60px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #d4a017;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #ff8c00;
+            margin-top: 10px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .hero-section {
+            position: relative;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .banana {
+            font-size: 200px;
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3);
+            border: none;
+            cursor: pointer;
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 140, 0, 0.5);
+            background: linear-gradient(135deg, #ffed4e 0%, #ff9500 100%);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 80px;
+            animation: fadeIn 1.2s ease-out 0.8s both;
+        }
+
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            color: #d4a017;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .feature-text {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 2px solid rgba(212, 160, 23, 0.2);
+            color: #999;
+            font-size: 0.9rem;
+            animation: fadeIn 1.4s ease-out 1s both;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+
+            .banana {
+                font-size: 120px;
+            }
+
+            .hero-section {
+                height: 250px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+ <div class="container">
+        <div class="header">
+            <h1 class="brand-name">📸Fotobox <span>30. Geburtstag Philip</span></h1>
+            <p class="claim">Downloadseite.</p>
+        </div>
+
+        <div class="hero-section">
+            <div class="banana">🖼️</div>
+        </div>
+ <a href="https://www.pictrs.com/christianoblanco/6214278" target="_blank" class="cta-button">💾 Gallerie Pictrs.com</a>
+
+ <br>
+ 
+        <a href="https://drive.google.com/drive/folders/18ExZNmBO-KxXahzjD_2CnjtLxrMUoqmx?usp=sharing" target="_blank" class="cta-button">💾 Download Google-Drive</a>
+<br> 
+
+       
+
+
+        <div class="features">
+        
+
+        <footer>
+            <p>&copy; 2026 Christian Weiß <br><br>  🏠Hinter Pöschen 26 - 56729 Kirchwald  📧cw1090@googlemail.com  📱0162/4239205.
+<br><br>
+Alle Rechte vorbehalten.</p>
+        </footer>
+</div>
+    </div>
+</body>
+</html>
